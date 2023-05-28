@@ -1,6 +1,7 @@
 const form = document.querySelector('.quiz-form');
-const showResult = document.querySelector('.modal-body');
+const showResultInModal = document.querySelector('.modal-body');
 const corretAnswers = ['B', 'B', 'B', 'B'];
+const finalResult = document.querySelector('.result');
 
 const response = {
     25: 'Que pena, sua nota esta abaixo da média.',
@@ -27,6 +28,8 @@ form.addEventListener('submit', event => {
     })
     
 
-    showResult.textContent = response[score];
+    // showResultInModal.textContent = response[score];
+    finalResult.querySelector('span').textContent = `${score}%`;
+    finalResult.classList.remove('d-none');
 })
 
