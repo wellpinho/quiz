@@ -26,10 +26,12 @@ form.addEventListener('submit', event => {
             score += 25;
         }
     })
-    
+
+    scrollTo(0, 0);    
 
     // showResultInModal.textContent = response[score];
     finalResult.querySelector('span').textContent = `${score}%`;
     finalResult.classList.remove('d-none');
 })
+
 
